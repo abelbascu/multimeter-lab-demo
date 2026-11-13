@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Laboratorio del multímetro</title>
+  <meta name="description" content="Aprende a usar un multímetro digital: tensión, resistencia, continuidad y corriente, en un laboratorio 3D interactivo." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='14' y='4' width='36' height='56' rx='8' fill='%23f2701b'/%3E%3Crect x='20' y='10' width='24' height='14' rx='2' fill='%23b7c2ab'/%3E%3Ccircle cx='32' cy='38' r='9' fill='%23222'/%3E%3C/svg%3E" />
+  <script type="module" crossorigin src="./assets/index-Bun18XDM.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BRdUrtBk.css">
+</head>
+<body>
+  <div id="app">
+    <div id="view"></div>
+
+    <aside id="panel">
+      <header class="brand">
+        <div class="logo" aria-hidden="true"><span></span></div>
+        <div>
+          <h1>Laboratorio del multímetro</h1>
+          <p>Aprende a medir con un multímetro digital</p>
+        </div>
+        <button id="panelToggle" class="icon-btn" title="Mostrar / ocultar el panel" aria-label="Mostrar u ocultar el panel">▾</button>
+      </header>
+      <nav id="lessonList" aria-label="Lecciones"></nav>
+      <section id="stepCard" aria-live="polite"></section>
+      <footer class="progress"><div id="progressBar"></div><span id="progressText"></span></footer>
+    </aside>
+
+    <div id="readout">
+      <canvas id="lcdMirror" width="490" height="280" aria-label="Pantalla del multímetro ampliada"></canvas>
+      <div id="contacts"></div>
+      <button id="fuseBtn" class="danger" hidden>Cambiar fusible</button>
+    </div>
+
+    <div id="help">
+      <span><b>Arrastra</b> las puntas</span>
+      <span><b>Clic</b> en el selector, botones y bornes</span>
+      <span><b>Arrastra</b> la mesa para girar · <b>Rueda</b> zoom · <b>Rueda pulsada</b> o <b>botón derecho</b> para mover la vista</span>
+      <button id="resetView" class="ghost">Recolocar vista</button>
+      <button id="resetProbes" class="ghost">Recoger puntas</button>
+    </div>
+
+    <div id="toast" role="status"></div>
+    <div id="loading"><div class="spinner"></div><p>Preparando el laboratorio…</p></div>
+  </div>
+</body>
+</html>
